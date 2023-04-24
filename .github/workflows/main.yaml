@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-      - 'release/**'
-
+      - 'release_v**'
 env:
   AWS_REGISTRY: "230690759643.dkr.ecr.eu-west-1.amazonaws.com"
   REPOSITORY_NAME: "vnc-desktop"
@@ -37,4 +36,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: "${{ env.AWS_REGISTRY }}/${{ env.REPOSITORY_NAME }}:v${{ github.run_number }}"
+        tags: "${{ env.AWS_REGISTRY }}/${{ env.REPOSITORY_NAME }}:v{{ github.ref_name }}.${{ github.run_number }}"
