@@ -133,13 +133,15 @@ Terminal=false
 eof
 
 
-RUN cat << eof >> portal.desktop
+RUN cat << eof >> /home/uvdesk/Desktop/portal.desktop
 [Desktop Entry]
 Type=Link
 Name=UVportal
 Icon=google-chrome
 URL=/usr/share/applications/uvportal.desktop
 eof
+
+RUN chown uvdesk:uvdesk /home/uvdesk/Desktop/portal.desktop
 
 EXPOSE 80
 WORKDIR /root
