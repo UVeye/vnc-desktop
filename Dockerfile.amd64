@@ -123,23 +123,23 @@ RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/fron
 
 # Create application Icon
 
-RUN cat << eof >> /usr/share/applications/uvportal.desktop
+RUN  <<EOF cat >> /usr/share/applications/uvportal.desktop
 [Desktop Entry]
 Name=UVportal
 Type=Application
 Icon=google-chrome
 Exec=/usr/bin/google-chrome http://uvportal.uveye.local
 Terminal=false
-eof
+EOF
 
 
-RUN cat << eof >> /home/uvdesk/Desktop/portal.desktop
+RUN  <<EOF cat >> /home/uvdesk/Desktop/portal.desktop
 [Desktop Entry]
 Type=Link
 Name=UVportal
 Icon=google-chrome
 URL=/usr/share/applications/uvportal.desktop
-eof
+EOF
 
 RUN chown uvdesk:uvdesk /home/uvdesk/Desktop/portal.desktop
 
