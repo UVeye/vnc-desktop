@@ -125,8 +125,6 @@ RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/fron
 COPY  icons/uvportal_applications.desktop /usr/share/applications/uvportal.desktop
 COPY icons/uvportal.desktop  /home/uvdesk/Desktop/portal.desktop
 
-RUN chown uvdesk:uvdesk /home/uvdesk/Desktop/portal.desktop
-
 EXPOSE 80
 WORKDIR /root
 ENV HOME=/home/ubuntu \
