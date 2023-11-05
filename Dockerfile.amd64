@@ -122,8 +122,8 @@ RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/fron
 	chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
 # Copy
-COPY  icons/uvportal_applications.desktop /usr/share/applications/uvportal.desktop
-COPY icons/uvportal.desktop  /home/uvdesk/Desktop/portal.desktop
+COPY  icons/applications/* /usr/share/applications/uvportal.desktop
+COPY  icons/*.desktop  /home/uvdesk/Desktop/
 
 EXPOSE 80
 WORKDIR /root
