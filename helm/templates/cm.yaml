@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   labels:
     {{- include "uv-portal-desktop.labels"  . | nindent 4 }}
-  name: system-consts
+  name: {{ include "uv-portal-desktop.name" . }}
   namespace: {{ include "uv-portal-desktop.namespace" . }}
 data:
-{{- .Values.systemConsts.configMapData | toYaml | nindent 2 }}
+{{- .Values.configMapData | toYaml | nindent 2 }}
