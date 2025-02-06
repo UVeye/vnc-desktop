@@ -13,7 +13,6 @@ spec:
   selector:
     matchLabels:
       {{- include "uv-portal-desktop.matchLabels" . | nindent 6 }}
-  serviceName: {{ include "uv-portal-desktop.name" . }}
   template:
     metadata:
       labels:
